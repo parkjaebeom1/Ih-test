@@ -2,9 +2,17 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.get('/', function (req, res) {
- res.send('Hello World!');
+app.use(express.json());
+
+app.get('/api/get', function (req, res) {
+ res.json({test:'Hello World!'});
 });
+
+app.post('/api/post', function (req, res) {
+    console.log(req.body);//get방식은 
+    res.json();
+});
+
 
 // app.listen(3000, function () {
 // });
