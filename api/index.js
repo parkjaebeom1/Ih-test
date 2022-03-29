@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const messageId = req.body['events'][0]['message']['id'];
+
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
@@ -23,6 +23,7 @@ app.post('/', function (req, res) {
      console.log('req.body', data);
      res.send('api: OK');
     });
+const messageId = req.body['events'][0]['message']['id'];
 console.log(messageId);
 // app.listen(3000, function () {
 // });
