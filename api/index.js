@@ -2,17 +2,25 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+
+
 
 app.get('/api/get', function (req, res) {
  res.json({test:'Hello World!'});
 });
 
 app.post('/api/post', function (req, res) {
-    console.log(req.body);//get방식은 
-    res.json();
+    console.log(req.body);
+    res.json({test:'Hello World!'});
 });
-
+app.post('/', function (req, res) {
+    // console.log(req.body);
+     const data = req.body;
+     console.log('req.body', data);
+     res.send('api: OK');
+    });
 
 // app.listen(3000, function () {
 // });
