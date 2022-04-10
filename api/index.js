@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-//const request = require('request');
+const request = require('request');
 
 
 
@@ -25,7 +25,7 @@ app.post('/', function (req, res) {
      res.send('api: OK');
      const messageId = req.body['events'][0]['message']['id'];
      console.log(messageId);
-     /*
+     
      const options = {
         url : `https://api-data.line.me/v2/bot/message/${req.body.events[0].message.id}/content`,
         method: 'get',
@@ -40,7 +40,7 @@ app.post('/', function (req, res) {
         console.log(ffffff);
 
         console.log(buffer);
-    });*/
+    });
 
  });
 
