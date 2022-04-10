@@ -25,6 +25,7 @@ app.post('/', function (req, res) {
      res.send('api: OK');
      const messageId = req.body['events'][0]['message']['id'];
      console.log(messageId);
+     /*
      const options = {
         url : `https://api-data.line.me/v2/bot/message/${req.body.events[0].message.id}/content`,
         method: 'get',
@@ -35,11 +36,11 @@ app.post('/', function (req, res) {
     };
     request(options, function(error, response, body){
         const buffer = new Buffer.from(body);
-        
+
         console.log(ffffff);
 
         console.log(buffer);
-    });
+    });*/
 
  });
 
