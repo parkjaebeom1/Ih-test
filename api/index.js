@@ -30,7 +30,7 @@ app.post('/', function (req, res) {
         url : `https://api-data.line.me/v2/bot/message/${req.body.events[0].message.id}/content`,
         method: 'get',
         headers: {
-            'Anthorization': 'Bearer ' + '6yenR51jvKxcZHJ8Wpg6BwVYX5RAFYHr1r29U5urd9J1C10hKgXXbX/ce+v4eXZhu831e6jHVaJzQDfU4VAZVPVOaIWRHWe8NBzFU/0CEWqM+1lKjbfcHwJcuMjDFBFfLX/pwh0/hEPz/HvaaBadSwdB04t89/1O/w1cDnyilFU=',
+            'Anthorization': 'Bearer ' + 6yenR51jvKxcZHJ8Wpg6BwVYX5RAFYHr1r29U5urd9J1C10hKgXXbX/ce+v4eXZhu831e6jHVaJzQDfU4VAZVPVOaIWRHWe8NBzFU/0CEWqM+1lKjbfcHwJcuMjDFBFfLX/pwh0/hEPz/HvaaBadSwdB04t89/1O/w1cDnyilFU=,
         },
         encoding: null
     };
